@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>后台管理系统</title>
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/login.css" rel="stylesheet">
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+</head>
+<body class="signin">
+<div class="signinpanel">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="signin-info">
+                <div class="logopanel m-b">
+                    <h1>杭州核创科技有限公司</h1>
+                </div>
+                <div class="m-b"></div>
+                <h3>
+                    欢迎使用 <strong>后台管理系统</strong>
+                </h3>
+                <!--<ul class="m-b">-->
+                    <!--<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> financial platform</li>-->
+                    <!--<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> investment banking</li>-->
+                    <!--<li><i class="fa fa-arrow-circle-o-right m-r-xs"></i> loan</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <form id="signupForm">
+                <h3 class="text-center">用户登录</h3>
+                <p class="m-t-md text-center">欢迎登录后台管理系统</p>
+                <input type="text" name="username" class="form-control uname" value="fy123456" placeholder="用户名"/>
+                <input type="password" name="password" class="form-control pword m-b" value="fy123456" placeholder="密码"/>
+                <input type="text"  name="imgCode" class="form-control pword m-b" value="" placeholder="图片验证码" style="width: 65%!important;"/>
+                <i class="imgcode" style="background-color: white; float: right;width: 31%;margin-top: -49px;">
+                    <img onclick="reloadImgCode(this)" id="picCode" style="width:100%;height:34px;" class="refresh" src="/getImgCode"/>
+                </i>
+                <a id="login"   data-loading="正在验证登录，请稍后..." class="btn btn-login btn-block">登录</a>
+                <!--按钮模块-->
+                <div class="outside-login">
+                    <!--<div class="outside-login-cot">-->
+                <!---->
+                    <!--</div>-->
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="signup-footer">
+        <div class="pull-left">&copy; 2018 All Rights Reserved. zzhu
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min.js?v=2.1.4"></script>
+<script src="/static/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/static/js/content.js?v=1.0.0"></script>
+<script src="/static/js/plugins/validate/jquery.validate.min.js"></script>
+<script src="/static/js/plugins/validate/messages_zh.min.js"></script>
+<script src="/static/js/plugins/layer/layer.min.js"></script>
+<script type="text/javascript">
+    $(document).keypress(function (event) {
+        var code = (event.keyCode ? event.keyCode : event.which);
+        if (code == '13') {
+            login();
+        }
+    });
+
+    function reloadImgCode(obj) {
+        $(obj).attr("src", "/getImgCode?t=" + new Date().getTime());
+    }
+
+    $(document).ready(function () {
+        $("#login").on('click',function(){
+            $("#signupForm").submit();
+        });
+        validateRule();
+    });
+
+    $.validator.setDefaults({
+        submitHandler: function () {
+            login();
+        }
+    });
+
+    function login() {
+        $.ajax({
+            type: "POST",
+            url: "/checkImageCode",
+            data: $('#signupForm').serialize(),
+            success: function (response) {
+                if (response.code == -1) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/signIn",
+                        data: $('#signupForm').serialize(),
+                        success: function (res) {
+                            if(res.address&&res.port>0){
+                                layer.msg("服务地址为："+res.address+":"+res.port+"--连接失败",{time:3500});
+                            }else{
+                                layer.open({
+                                    type: 1,
+                                    title: $("#login").attr("data-loading") ,
+                                    closeBtn:false,
+                                    time: 2000, //2秒后自动关闭
+                                    fixed: true,
+                                    shadeClose: true, //开启遮罩关闭
+                                    end:function () {
+                                        if (res.code == 1) {
+                                            var index = layer.load(1, {
+                                                shade: [0,'#fff'] //0.1透明度的白色背景
+                                            });
+                                            layer.msg("登录成功",{time:1000},function(){
+                                                parent.location.href = '/';
+                                            });
+                                        } else {
+                                            layer.msg(res.message,{time:2000},function(){
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+
+                        },
+                        timeout:3000,
+                        global:false,
+                        error:function(xhr,errorText,errorType){
+                            layer.msg(errorType.toString()+"---"+xhr.status,{time:2000});
+                        }
+                    });
+                } else {
+                    reloadImgCode($("#picCode"));
+                    layer.msg(response.message,{time:2000},function(){
+
+                    });
+                }
+            }
+        });
+    }
+
+    /*  required: "必选字段",
+        remote: "请修正该字段",
+        email: "请输入正确格式的电子邮件",
+        url: "请输入合法的网址",
+        date: "请输入合法的日期",
+        dateISO: "请输入合法的日期 (ISO).",
+        number: "请输入合法的数字",
+        digits: "只能输入整数",
+        creditcard: "请输入合法的信用卡号",
+        equalTo: "请再次输入相同的值",
+        accept: "请输入拥有合法后缀名的字符串",
+        maxlength: jQuery.validator.format("请输入一个 长度最多是 {0} 的字符串"),
+        minlength: jQuery.validator.format("请输入一个 长度最少是 {0} 的字符串"),
+        rangelength: jQuery.validator.format("请输入 一个长度介于 {0} 和 {1} 之间的字符串"),
+        range: jQuery.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+        max: jQuery.validator.format("请输入一个最大为{0} 的值"),
+        min: jQuery.validator.format("请输入一个最小为{0} 的值")
+     */
+    function validateRule() {
+        var icon = "<i class='fa fa-times-circle'></i> ";
+        $("#signupForm").validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true,
+                    checkPwd:true
+                },
+                googleCode: {
+                    required: false
+                },
+                imgCode:{
+                    required:false
+                }
+            },
+            messages: {
+                username: {
+                    required: icon + "请输入您的用户名",
+                },
+                password: {
+                    required: icon + "请输入您的密码",
+                },
+                googleCode: {
+                    required: icon + "请输入谷歌身份验证码",
+                },
+                imgCode: {
+                    required: icon + "请输入图片验证码",
+                }
+            }
+        })
+    };
+
+    $.validator.addMethod("checkPwd",function(value,element,params){
+        var checkPwd = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/i;
+        return this.optional(element)||(1==1);//checkPwd.test(value)
+    },"*请输入正确的密码！");
+
+</script>
+</body>
+</html>

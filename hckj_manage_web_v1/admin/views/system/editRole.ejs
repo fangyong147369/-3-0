@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<% include ../main/top.ejs %>
+<link href="/static/js/plugins/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css"/>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm">
+                        <input type="hidden" name="id" value="<%=model&&model.id || 0 %>"/>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">角色名：</label>
+                            <div class="col-sm-8">
+                                <input id="title" name="name" value="<%=model&&model.name || '' %>" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">状态:</label>
+                            <div class="col-sm-8">
+                                <label class="radio-inline">
+                                    <input type="radio" name="status"
+                                           value="1" checked <%= model&&model.status == 1 ? 'checked=checked' : '' %> /> 启用
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="status"
+                                           value="-1" <%= model&&model.status == -1 ? 'checked=checked' : '' %>/> 禁用
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">备注：</label>
+                            <div class="col-sm-8">
+                                <input id="remark" name="remark" value="<%= model&&model.remark || '' %>" class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div style="width:48%;margin:0 auto;">
+                            <pre>
+                                <div id=Tc></div>
+                            </pre>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3" style="margin-left: 45%">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../main/bottom.ejs %>
+<script type="text/javascript" src="/static/treecheckbox/treeCheckBox.0.2.js"></script>
+<script type="text/javascript" src="/static/js/plugins/webuploader/0.1.5/webuploader.js"></script>
+<script src="/static/js/upload.js?v=<%= new Date().getTime() %>"></script>
+</body>
+<script>
+    function htmlToText()
+    {
+        ho=document.getElementById('TreeView');
+        to=document.getElementById('TreeView_text');
+        to.value=ho.innerHTML;
+    }
+    var rows = new Object;
+    var rowsPidIndex = new Object;
+    rows=JSON.parse(decodeURIComponent('<%=menu%>'));
+    for(var key in rows){
+        var subscript=parseInt(rows[key].pid);
+        if(!rowsPidIndex[subscript]){
+            rowsPidIndex[subscript]=new Array();
+        }
+        rowsPidIndex[subscript].push(rows[key].id);
+    }
+</script>
+<script>
+    var ctree = new  treeCheckBox( 'ctree'  , rows , rowsPidIndex );
+    ctree.iconPath='/static/treecheckbox/image/';
+    ctree.useCheckBox=true;
+    ctree.checkBoxName='menu';
+    ctree.checkBoxChecked=false;
+    ctree.toString( Tc );
+    var roleMenuStr='<%=roleMenu%>';
+    var roleMenus=roleMenuStr.split(",");
+    if(roleMenus && roleMenus instanceof Array){
+        for(var i=0;i<roleMenus.length;i++){
+            var chk=$("#ctree_node_checkbox_"+roleMenus[i]);
+            if(chk){
+                chk.attr("checked",true)
+            }
+
+        }
+    }
+</script>
+<script>
+
+    $(function () {
+
+        <%if(!model){%>
+        $("#ctree_node_checkbox_0").attr("checked",false);
+        <%}%>
+        $('.summernote').summernote({
+            height: '220px',
+            lang: 'zh-CN',
+            callbacks: {
+            }
+        });
+        var content = $("#content").val();
+
+        $('#content_sn').summernote('code', content);
+        validateRule();
+    });
+
+    $.validator.setDefaults({
+        submitHandler: function () {
+            submit01();
+        }
+    });
+
+    function submit01() {
+        var content = $("#content_sn").summernote('code');
+        $("#content").val(content);
+        var arr = [];
+        $.each($('.TreeNode input[type="checkbox"]'), function (i, item) {
+            if ($(item).is(':checked'))
+                arr.push($(item).val())
+        })
+        $.ajax({
+            type: "POST",
+            url: "/system/saveRole",
+            data: {model:$.extend($('#signupForm').serializeJson(),{menuIdStr:arr.join(',')})},
+            async: false,
+            error: function (err) {
+                layer.alert("Connection error"+err);
+            },
+            success: function (data) {
+                if (data.code == 1) {
+                    parent.layer.msg("保存成功");
+                    parent.reLoad();
+                    var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+                    parent.layer.close(index);
+                } else {
+                    layer.alert(data.message)
+                }
+            }
+        });
+    }
+
+    function validateRule() {
+        var icon = "<i class='fa fa-times-circle'></i> ";
+        $("#signupForm").validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                }
+            },
+            messages: {
+                name: {
+                    required: icon + "请输入角色名"
+                }
+            }
+        })
+    }
+</script>
+</html>

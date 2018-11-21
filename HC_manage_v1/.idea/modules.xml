@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HC_manage_v1.iml" filepath="$PROJECT_DIR$/.idea/HC_manage_v1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys/sys.iml" filepath="$PROJECT_DIR$/sys/sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys_api/sys_api.iml" filepath="$PROJECT_DIR$/sys_api/sys_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys_common/sys_common.iml" filepath="$PROJECT_DIR$/sys_common/sys_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys_core/sys_core.iml" filepath="$PROJECT_DIR$/sys_core/sys_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sys_netty/sys_netty.iml" filepath="$PROJECT_DIR$/sys_netty/sys_netty.iml" />
+    </modules>
+  </component>
+</project>

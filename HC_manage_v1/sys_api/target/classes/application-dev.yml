@@ -1,0 +1,40 @@
+web:
+  config:
+    webTitle: "欢迎使用SpringBoot"
+    authorName: "核创"
+    authorBlogUrl: "http://hc.company.com"
+
+server:
+  port: 8080
+  servlet:
+  session.timeout: 10
+  context-path: /hckj.com/pc
+  tomcat:
+      uri-encoding: UTF-8
+
+#加密配置
+#security:
+#  AES256:
+#    key: "0123456789123456"
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.2.84:3306/dev??characterEncoding=utf-8
+    username: root
+    password: 123456
+    datasource.max-idle: 10
+    datasource.max-wait: 10000
+    datasource.min-idle: 5
+    datasource.initial-size: 5
+
+# 日志配置
+logging:
+  level:
+    com.hc: debug
+    org.springframework: WARN
+    org.spring.springboot.dao: debug
+
+
+netty:
+  port: 3000

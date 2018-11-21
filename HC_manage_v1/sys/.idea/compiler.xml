@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sys_api" />
+        <module name="sys_common" />
+        <module name="sys_core" />
+        <module name="sys_netty" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sys" target="1.8" />
+      <module name="sys_api" target="1.8" />
+      <module name="sys_common" target="1.8" />
+      <module name="sys_core" target="1.8" />
+      <module name="sys_netty" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

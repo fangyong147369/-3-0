@@ -1,0 +1,66 @@
+{
+  "code": 1,
+  "secure": false,
+  "message": "操作成功",
+  "data": {
+    "page": {
+      "start": 0,
+      "end": 2,
+      "total": 2,
+      "pernum": 10,
+      "pages": 1,
+      "currentPage": 1
+    },
+    "list": [
+      {
+        "id": 1,
+        "name": "超级管理员",
+        "status": 1,
+        "remark": "系统所有权",
+        "roleMenus": [
+          {
+            "id": 230
+          },
+          {
+            "id": 231
+          },
+          {
+            "id": 232
+          },
+          {
+            "id": 233
+          },
+          {
+            "id": 234
+          },
+          {
+            "id": 235
+          }
+        ],
+        "pageNo": 0,
+        "pageSize": 10,
+        "searchName": null,
+        "menuIdStr": null
+      },
+      {
+        "id": 2,
+        "name": "配方管理员",
+        "status": 1,
+        "remark": "只能操作配方管理",
+        "roleMenus": [
+          {
+            "id": 228
+          },
+          {
+            "id": 229
+          }
+        ],
+        "pageNo": 0,
+        "pageSize": 10,
+        "searchName": null,
+        "menuIdStr": null
+      }
+    ],
+    "type": 0
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<% include ../main/top.ejs %>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="col-sm-12">
+        <div class="ibox">
+            <div class="ibox-body">
+                <!--<div id="exampleToolbar" role="group">-->
+                <!--<button type="button" class="btn btn-primary" onclick="add()"><i class="fa fa-plus" aria-hidden="true"></i>添加</button>-->
+                <!--</div>-->
+                <div class="fixed-table-toolbar">
+                    <div class="columns pull-right">
+                        <!--<button class="btn btn-success" onclick="">测色</button>-->
+                    </div>
+                    <div class="columns pull-left col-md-2 nopadding">
+                        <input id="l" type="text" class="form-control" placeholder="l">
+                        <input id="a" type="text" class="form-control" placeholder="a">
+                        <input id="b" type="text" class="form-control" placeholder="b">
+                    </div>
+                    <div class="columns pull-left col-md-2 nopadding">
+                        <input id="l1" type="text" class="form-control" placeholder="色差（dE）">
+                        <input id="a1" type="text" class="form-control" placeholder="光源">
+                        <input id="b1" type="text" class="form-control" placeholder="材质">
+                    </div>
+                    <div class="columns pull-left">
+                        <button class="btn btn-success" onclick=""
+                                style="background-color: #00B83F;margin-top: 20px;margin-left:30px;width: 80px;height: 60px">
+                            测色
+                        </button>
+                    </div>
+                    <div class="columns pull-left">
+                        <button class="btn btn-success" onclick="reLoad()"
+                                style="margin-top: 20px;margin-left:30px;width: 80px;height: 60px">查找
+                        </button>
+                    </div>
+                </div>
+                <table id="exampleTable" data-mobile-responsive="true">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<% include ../main/bottom.ejs %>
+<script type="text/javascript">
+
+    $(function () {
+        load();
+    });
+
+    function load() {
+        $('#exampleTable')
+            .bootstrapTable(
+                {
+                    method: 'post', // 服务器数据的请求方式 get or post
+                    url: "/formula/getFormulaList", // 服务器数据的加载地址
+                    method: 'POST',                      //请求方式（*）
+                    showRefresh: false,
+                    showToggle: false,
+                    showColumns: false,
+                    iconSize: 'outline',
+                    toolbar: '#exampleToolbar',
+                    striped: true, // 设置为true会有隔行变色效果
+                    dataType: "json", // 服务器返回的数据类型
+                    pagination: true, // 设置为true会在底部显示分页条
+                    // queryParamsType : "limit",
+                    // //设置为limit则会发送符合RESTFull格式的参数
+                    singleSelect: false, // 设置为true将禁止多选
+                    contentType: "application/x-www-form-urlencoded",
+                    // //发送到服务器的数据编码类型
+                    pageSize: 20, // 如果设置了分页，每页数据条数
+                    pageNumber: 1, // 如果设置了分布，首页页码
+                    //dataField: "data",//这是返回的json数组的key.默认好像是"rows".这里只有前后端约定好就行
+                    pageList: [50, 100, 200, 500],//分页步进值
+                    search: false, // 是否显示搜索框
+                    showColumns: false, // 是否显示内容下拉框（选择显示的列）
+                    sidePagination: "server", // 设置在哪里进行分页，可选值为"client" 或者 "server"
+                    queryParams: function (params) {
+                        return {
+                            model: {
+                                //说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
+                                pageSize: params.limit,
+                                pageNo: (params.offset / params.limit) + 1,
+                                searchName: $('#searchName').val(),
+                            }
+                        };
+                    },
+                    columns: [
+                        {
+                            field: 'colorantModel.rgb',
+                            align: 'center',
+                            title: '颜色'
+                        },
+                        {
+                            field: 'name',
+                            align: 'center',
+                            title: '配方名称'
+                        },
+                        {
+                            field: 'sampleName',
+                            align: 'center',
+                            title: '色样号'
+                        },
+                        {
+                            field: 'dyeGroupModel.description',
+                            align: 'center',
+                            title: '染料描述'
+                        },
+                        {
+                            field: 'name',
+                            align: 'center',
+                            title: '色差'
+                        }
+                        ,
+                        {
+                            field: 'colorantModel.l',
+                            align: 'center',
+                            title: 'l'
+                        },
+                        {
+                            field: 'colorantModel.a',
+                            align: 'center',
+                            title: 'a'
+                        },
+                        {
+                            field: 'colorantModel.b',
+                            align: 'center',
+                            title: 'b'
+                        },
+                        {
+                            field: 'concentrationModel',
+                            align: 'center',
+                            title: '染料名称',
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[0]&&value[0].dyeModel){
+                                        return value[0].dyeModel.name;
+
+                                }
+                                return "";
+                            }
+                        },
+                        {
+                            field: "concentrationModel",
+                            align: 'center',
+                            title: '浓度(%)' ,
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[0]){
+                                        return value[0].concentration;
+                                }
+                                return "";
+                            }
+                        }
+                        ,
+                        {
+                            field: 'concentrationModel',
+                            align: 'center',
+                            title: '染料名称',
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[1]&&value[1].dyeModel){
+                                    return value[1].dyeModel.name;
+
+                                }
+                                return "";
+                            }
+                        },
+                        {
+                            field: "concentrationModel",
+                            align: 'center',
+                            title: '浓度(%)' ,
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[1]){
+                                    return value[1].concentration;
+                                }
+                                return "";
+                            }
+                        },
+                        {
+                            field: 'concentrationModel',
+                            align: 'center',
+                            title: '染料名称',
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[2]&&value[2].dyeModel){
+                                    return value[2].dyeModel.name;
+
+                                }
+                                return "";
+                            }
+                        },
+                        {
+                            field: "concentrationModel",
+                            align: 'center',
+                            title: '浓度(%)' ,
+                            formatter:function(value,row,index){
+                                if (value.length>0&&value[2]){
+                                    return value[2].concentration;
+                                }
+                                return "";
+                            }
+                        },
+                        {
+                            title : '操作',
+                            field : 'concentrationModel',
+                            align : 'center' ,
+                            formatter:function(value,row,index){
+                                if(value.length>3){
+                                    return '<a class="btn btn-primary btn-sm" href="javascript:void(0);" mce_href="#"  title="浓度" onclick="showAll(' + row.id+')">查看浓度</i></a> ';
+                                }
+                                return "";
+                            }
+                        }
+                    ]
+                });
+    }
+
+    function reLoad() {
+        $('#exampleTable').bootstrapTable('refresh');
+    }
+    function showAll(id) {
+        layer.open({
+            type: 2,
+            title: '配方浓度表',
+            maxmin: true,
+            shadeClose: true, // 点击遮罩关闭层
+            area: ['80%', '90%'],
+            content: '/formula/concentration/?formulaId=' + id
+        });
+    }
+</script>
+
+</body>
+</html>

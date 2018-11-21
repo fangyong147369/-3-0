@@ -1,0 +1,398 @@
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T035003.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034917.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034644.200.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456s&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034633.200.json
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034627.200.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034242.200.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034148.200.json
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034043.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T034038.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033939.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033918.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033905.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033850.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033755.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033742.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033713.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033651.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033559.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033514.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033439.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033311.404.txt
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033305.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033225.404.html
+
+###
+
+POST http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033221.200.json
+
+###
+
+POST http://localhost:7000/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033053.200.json
+
+###
+
+POST http://localhost:7000/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T033048.200.json
+
+###
+
+POST http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032619.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032346.500.html
+
+###
+
+POST http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032250.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032238.200.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032210.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T032126.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T031244.200.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030937.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030914.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030913.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030850.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030734.404.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030557.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030514.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030512.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030338.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030239.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030238.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030215-1.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030215.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030214.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030136.500.html
+
+###
+
+GET http://localhost:4700/signIn?username=fy123456&password=fy123456
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-14T030017.500.html
+
+###
+

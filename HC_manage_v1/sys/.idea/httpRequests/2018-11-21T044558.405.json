@@ -1,0 +1,8 @@
+{
+  "timestamp": 1542789958384,
+  "status": 405,
+  "error": "Method Not Allowed",
+  "exception": "org.springframework.web.HttpRequestMethodNotSupportedException",
+  "message": "Request method 'GET' not supported",
+  "path": "/hckj.com/pc/manage/role/list"
+}

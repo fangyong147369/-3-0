@@ -1,0 +1,398 @@
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/add?menuIdStr=&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T053418.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/add?menuIdStr=&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T052215.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T052124.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T052118.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T052023.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T052021.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T051800.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T051757.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050822.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050548.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050547.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050321.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050107.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T050040.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045912.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045702.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045557.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045539.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045503.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045411.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045318.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045224.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045139.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T045120.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044845.405.json
+
+###
+
+GET http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044803.404.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/lists?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044725.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044722.200.json
+
+###
+
+GET http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044558.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044555.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044534.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044300.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044204.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T044055.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043857.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043252.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043225.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043224-1.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043224.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043223.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043222.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T043219.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T042316.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T042150.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T042140.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T041934.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list1?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T041440.405.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/role/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T032422.200.json
+
+###
+
+POST http://192.168.2.84:8080/hckj.com/pc/manage/menu/list?pageSize=10&pageNumber=1&description=description&name=name&parentName=菜单管理
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-21T032350.200.json
+
+###
+
